@@ -28,7 +28,7 @@ class CommentController extends Controller
         $cmt = new Comment();
         $cmt->user_id = $request->user_id;
         $cmt->post_id = $request->post_id;
-        $cmt->comment_id = $request->comment_id;
+        $cmt->comment = $request->comment;
 
         $cmt->save();
         return response()->json("Comment created");
